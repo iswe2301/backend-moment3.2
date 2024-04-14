@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap">
+    <script src="js/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <title>Isa Westling | WorkXperience</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <div id="overlay" class="hidden"></div>
+    <!-- Picturetagg med bakgrundbild i olika filformat / storlekar -->
+    <picture class="body-background">
+        <source srcset="images/background.jpg?as=avif" media="(min-width: 1921px)" type="image/avif">
+        <source srcset="images/background.jpg?as=webp" media="(min-width: 1921px)" type="image/webp">
+        <source srcset="images/background.jpg" media="(min-width: 1921px)" type="image/jpeg">
+        <source srcset="images/background.jpg?as=avif&width=1920" media="(min-width: 1201px) and (max-width: 1920px)"
+            type="image/avif">
+        <source srcset="images/background.jpg?as=webp&width=1920" media="(min-width: 1201px) and (max-width: 1920px)"
+            type="image/webp">
+        <source srcset="images/background.jpg?width=1920" media="(min-width: 1201px) and (max-width: 1920px)"
+            type="image/jpeg">
+        <source srcset="images/background.jpg?as=avif&width=1200" media="(min-width: 801px) and (max-width: 1200px)"
+            type="image/avif">
+        <source srcset="images/background.jpg?as=webp&width=1200" media="(min-width: 801px) and (max-width: 1200px)"
+            type="image/webp">
+        <source srcset="images/background.jpg?width=1200" media="(min-width: 801px) and (max-width: 1200px)"
+            type="image/jpeg">
+        <source srcset="images/small_background.jpg?as=avif&width=800" media="(max-width: 800px)" type="image/avif">
+        <source srcset="images/small_background.jpg?as=webp&width=800" media="(max-width: 800px)" type="image/webp">
+        <source srcset="images/small_background.jpg?width=800" media="(max-width: 800px)" type="image/jpeg">
+        <img id="background-img" src="images/background.jpg" alt="Rosa bubblor">
+    </picture>
+
+    <!-- Huvudinnehåll -->
+    <main>
+
+        <!-- Header med logotyp och navmeny -->
+        <header>
+            <a href="/"><img src="images/logo.svg" alt="Logotyp WorkXperience"></a>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">ERFARENHETER</a></li>
+                    <li><a href="add.html">LÄGG TILL ERFARENHET</a></li>
+                    <li><a class="active" href="about.html">OM SIDAN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>OM SIDAN</h1>
+        <section id="about">
+            <h2>Uppgiftsbeskrivning</h2>
+            <p>Denna webbaplikation har tagits fram i kursen Backend-baserad webbutveckling (DT207G) med syftet att att
+                erbjuda en plattform där användare kan dela med sig av sina jobberfarenheter. Applikationen möjliggör
+                för användarna att lägga till nya erfarenheter, visa befintliga, redigera detaljer om sina upplevelser
+                och även radera dem när de inte längre är aktuella.</p>
+            <p>Applikationen bygger på en kombination av Node.js och Express för serverhantering, medan
+                PostgreSQL har använts som databasserver för att lagra data om erfarenheterna.</p>
+            <h3>Slutsatser</h3>
+            <p>Det här har varit ett väldigt roligt projekt att få utveckla. Det har varit annorlunda att få kompinera
+                en egen webbtjänst med en webbapplikation, och det har gett mig större insikter i hur API:er kan skapas
+                och användas. Jag tycker även att sättet att utveckla på har blivit enklare, i och med att man delar upp
+                allting i mindre delar. Jag upplever att det blir lättare att hantera då jag kunde fokusera på backend i
+                moment 2.1 och frontend i moment 2.2, och samtidigt arbeta mer modulmässigt med utveclingen i båda
+                delarna.</p>
+            <p>Att få skapa en egen webbtjänst och använda den i ett eget projekt har varit en rolig och lärorik
+                utmaning. Det känns väldigt kul att få sätta alla sina kunskaper i ett och samma projekt och att
+                utveckla något från "start" till "slut".
+            </p>
+            <p>Jag har tidigare varit helt inställd på att jag vill arbeta med frontend-utveckling i framtiden, eftersom
+                jag har ett stort intresse för att arbeta med "det man faktiskt ser". Nu när jag väl har börjat förstå
+                vad backend-utveckling innebär känner jag att mitt intresse för backend har ökat och en ny dörr har
+                öppnats. Jag trodde verkligen inte att det skulle falla mig i smak, men det är mycket roligare än vad
+                jag tänkte mig!</p>
+        </section>
+        <img id="signature" src="images/signature.svg" alt="Isa Westling signatur">
+    </main>
+
+    <!-- Mobilmeny -->
+    <div class="menu-container">
+        <nav class="mobile-menu hidden">
+            <ul>
+                <li><a href="index.html">ERFARENHETER</a></li>
+                <li><a href="add.html">LÄGG TILL ERFARENHET</a></li>
+                <li><a class="active" href="about.html">OM SIDAN</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">MENY <i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Isa Westling</p>
+        <p>DT207G Backend-baserad webbutveckling</p>
+        <p>Webbutvecklingsprogrammet, Mittuniversitetet</p>
+    </footer>
+
+</body>
+
+</html>
