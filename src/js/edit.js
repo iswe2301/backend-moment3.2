@@ -19,21 +19,21 @@ let experienceID = null; // Skapar en global variabel för erfarenhetens ID och 
 
 // Funktion för att fylla i redigeringsformuläret med specifik erfarenhet
 export function fillEditForm(experience) {
-    experienceID = experience.id; // Sätter erfarenhetens ID till det specifika ID:et för erfarenheten
+    experienceID = experience._id; // Sätter erfarenhetens ID till det specifika ID:et för erfarenheten
     // Visar redigeringsformuläret
     editFormContainer.style.display = "block";
     // Scrollar till formulärets position med ett mjukt beteende
     editFormContainer.scrollIntoView({ behavior: "smooth" });
 
     // Fyller i formuläret med uppgifterna för den valda erfarenheten
-    editContainer.companyname.value = experience.companyname;
-    editContainer.jobtitle.value = experience.jobtitle;
+    editContainer.companyname.value = experience.companyName;
+    editContainer.jobtitle.value = experience.jobTitle;
     editContainer.location.value = experience.location;
-    editContainer.startdate.value = experience.startdate.substring(0, 10);
+    editContainer.startdate.value = experience.startDate.substring(0, 10);
 
     // Kontrollerar om enddate finns
-    if (experience.enddate) {
-        editContainer.enddate.value = experience.enddate.substring(0, 10);
+    if (experience.endDate) {
+        editContainer.enddate.value = experience.endDate.substring(0, 10);
     } else {
         editContainer.enddate.value = ""; // Lämnar fältet tomt om enddate är null/pågående
     }
@@ -82,12 +82,12 @@ export async function updateExperience(id, companyname, jobtitle, location, star
     try {
         // Skapar ett objekt med uppdaterad information för jobberfarenheten
         let updatedExperience = {
-            id: id,
-            companyname: companyname,
-            jobtitle: jobtitle,
+            _id: id,
+            companyName: companyname,
+            jobTitle: jobtitle,
             location: location,
-            startdate: startdate,
-            enddate: enddate,
+            startDate: startdate,
+            endDate: enddate,
             description: description
         }
 
