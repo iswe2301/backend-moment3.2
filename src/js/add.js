@@ -32,7 +32,7 @@ export async function createExperience(companyname, jobtitle, location, startdat
         const data = await response.json();
 
         popupMsg.classList.add("show"); // Lägger till klassen show för popup när erfarenheten har skapats
-        popupMsg.innerHTML = `Jobberfarenhet för ${companyName} har skapats!`; // Skapar innehållet för popupen
+        popupMsg.innerHTML = `Jobberfarenhet för ${companyname} har skapats!`; // Skapar innehållet för popupen
 
         // Döljer popup efter 3 sekunder
         setTimeout(function () {
